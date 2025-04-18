@@ -1,11 +1,12 @@
 // c 에서 원래는 class 만들어서 쓰고싶었지만
 // 억지로 만들어서 쓸수는 있지만 그냥 뭔가 보기안좋아서.. 기각
+// 주석은 잘못됀 부분이 있을가능성이 높음
 
 #include <stdio.h>
 
 typedef struct {
     int *stack; // stack->stack (포인터 위치)
-    int rsp; // stack->rsp (stack 현제위치)
+    int rsp; // stack->rsp (stack 현제위치) 포인터를 안쓴이유 --> stack 에서 값을 찾아야함 --> ptr 쓸 이유 X
 } Stack;
 
 int push(Stack* stack, int value) {
