@@ -34,6 +34,11 @@ int main() {
     stack->stack[5];
 
     push(stack, 5);
+    push(stack, 4);
 
-    printf("%d\n", stack->stack[0]);
+    printf("%d\n", stack->stack[1]); // 4
+    
+    printf("%d\n", pop(stack)); // 4
+
+    printf("%d\n", stack->stack[0]); // 5
 }
