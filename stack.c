@@ -29,6 +29,14 @@ int pop(Stack* stack) {
     return value;
 }
 
+int peek(Stack* stack) {
+    if (stack->rsp == 0) {
+        return 0;
+    }
+
+    return stack->stack[stack->rsp];
+}
+
 int main() {
     Stack *stack;
     stack->rsp = 0;
