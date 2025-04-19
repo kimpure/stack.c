@@ -3,9 +3,10 @@
 // 주석은 잘못됀 부분이 있을가능성이 높음
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct {
-    int *stack; // stack->stack (포인터 위치)
+    int *stack; // stack->stack 
     int rsp; // stack->rsp (stack 현제위치) 포인터를 안쓴이유 --> stack 에서 값을 찾아야함 --> ptr 쓸 이유 X
 } Stack;
 
@@ -31,7 +32,7 @@ int pop(Stack* stack) {
 int main() {
     Stack *stack;
     stack->rsp = 0;
-    stack->stack[5];
+    stack->stack = malloc(5);
 
     push(stack, 5);
     push(stack, 4);
